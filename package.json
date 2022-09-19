@@ -2,7 +2,7 @@
   "name": "recipe-tracker",
   "version": "1.0.0",
   "description": "A repository to hold a personal full-stack recipe tracker as part of my 100Devs 100Hours project",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
