@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 const flash = require('express-flash');
 const logger = require('morgan');
 const connectDB = require('./config/database');
+const mainRoutes = require('./routes/main');
 
 
 //Use .env file in config directory
@@ -29,8 +30,11 @@ app.use(express.json());
 //Logging
 app.use(logger('dev'));
 
-//Use flash messages for errors, info, etc...
-app.use(flash())
+// //Use flash messages for errors, info, etc...
+// app.use(flash());
+
+//Setup routes which server will listen to
+app.use('/', mainRoutes);
 
 //Initiate Server
 app.listen(process.env.PORT, () => {
